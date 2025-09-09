@@ -84,45 +84,44 @@ const HomePage: React.FC = () => {
     });
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">Job Application Tracker</h1>
-        <Link to="/add-job" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <div>
+      <div>
+        <h1>Job Application Tracker</h1>
+        <Link to="/add-job">
           Add Job
         </Link>
       </div>
 
-      <div className="flex flex-wrap gap-4 mb-4">
+      <div>
         <input
           type="text"
           placeholder="Search by company or role..."
           value={searchTerm}
           onChange={handleSearch}
-          className="p-2 border border-gray-300 rounded w-full md:w-1/3"
         />
-        <select onChange={handleFilter} className="p-2 border border-gray-300 rounded w-full md:w-auto">
+        <select onChange={handleFilter}>
           <option value="">All Statuses</option>
           <option value="Applied">Applied</option>
           <option value="Interviewed">Interviewed</option>
           <option value="Rejected">Rejected</option>
         </select>
-        <select onChange={handleSort} className="p-2 border border-gray-300 rounded w-full md:w-auto">
+        <select onChange={handleSort}>
           <option value="desc">Date Descending</option>
           <option value="asc">Date Ascending</option>
         </select>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
         {filteredJobs.map(job => (
-          <div key={job.id} className="p-4 border border-gray-200 rounded-lg shadow-sm">
-            <h2 className="text-xl font-semibold">{job.company}</h2>
-            <p className="text-gray-600">{job.role}</p>
-            <p className={`text-sm font-medium ${job.status === 'Applied' ? 'text-yellow-500' : job.status === 'Interviewed' ? 'text-green-500' : 'text-red-500'}`}>
+          <div key={job.id}>
+            <h2>{job.company}</h2>
+            <p>{job.role}</p>
+            <p>
               {job.status}
             </p>
-            <p className="text-xs text-gray-500">Applied on: {new Date(job.dateApplied).toLocaleDateString()}</p>
-            <Link to={`/edit-job/${job.id}`} className="text-blue-500 hover:underline mt-2 mr-4 inline-block">Edit</Link>
-            <button onClick={() => deleteJob(job.id)} className="text-red-500 hover:underline mt-2 inline-block">Delete</button>
+            <p>Applied on: {new Date(job.dateApplied).toLocaleDateString()}</p>
+            <Link to={`/edit-job/${job.id}`}>Edit</Link>
+            <button onClick={() => deleteJob(job.id)}>Delete</button>
           </div>
         ))}
       </div>
