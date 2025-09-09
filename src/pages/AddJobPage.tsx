@@ -90,7 +90,7 @@ const AddJobPage: React.FC = () => {
         </div>
       </nav>
 
-      <div className="container-custom section-padding">
+      <div className="container-custom page-content">
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">

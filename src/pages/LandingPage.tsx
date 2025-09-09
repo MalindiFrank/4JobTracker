@@ -17,17 +17,17 @@ const LandingPage: React.FC = () => {
             <div className="flex items-center space-x-4">
               <Link to="/login" className="nav-link">
                 Sign In
-              </Link>
+          </Link>
               <Link to="/register" className="btn-primary">
                 Get Started
-              </Link>
-            </div>
-          </div>
+          </Link>
+        </div>
+      </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="section-padding">
+      <section className="py-16 sm:py-20 lg:py-24">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in">
@@ -52,7 +52,7 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="section-padding bg-white/50">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white/50">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -112,7 +112,7 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding">
+      <section className="py-16 sm:py-20 lg:py-24">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <div className="card-elevated bg-gradient-to-br from-brown-50 to-warm-50 border-brown-200">

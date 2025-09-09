@@ -172,7 +172,7 @@ const HomePage: React.FC = () => {
         </div>
       </nav>
 
-      <div className="container-custom section-padding">
+      <div className="container-custom page-content">
         {/* Header Section */}
         <div className="mb-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">

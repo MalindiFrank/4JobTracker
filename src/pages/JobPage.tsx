@@ -114,7 +114,7 @@ const JobPage: React.FC = () => {
         </div>
       </nav>
 
-      <div className="container-custom section-padding">
+      <div className="container-custom page-content">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="card-elevated mb-8">

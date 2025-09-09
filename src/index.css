@@ -90,7 +90,11 @@
   }
   
   .section-padding {
-    @apply py-12 sm:py-16 lg:py-20;
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+  
+  .page-content {
+    @apply pt-8 sm:pt-12 lg:pt-16;
   }
   
   /* Animation Classes - These are defined in the Tailwind config */
