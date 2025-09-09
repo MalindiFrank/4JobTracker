@@ -93,16 +93,5 @@
     @apply py-12 sm:py-16 lg:py-20;
   }
   
-  /* Animation Classes */
-  .animate-fade-in {
-    @apply animate-fade-in;
-  }
-  
-  .animate-slide-up {
-    @apply animate-slide-up;
-  }
-  
-  .animate-scale-in {
-    @apply animate-scale-in;
-  }
+  /* Animation Classes - These are defined in the Tailwind config */
 }
